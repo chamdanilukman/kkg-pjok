@@ -1,19 +1,23 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "kkg-pjok",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "server": "node server.js",
     "dev:all": "node server.js & vite",
     "build": "vite build",
+    "start": "node server.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "db:config": "node scripts/update-database-config.js",
     "db:test": "node scripts/test-database-connection.js",
     "db:test-full": "node scripts/comprehensive-test.js",
     "db:setup": "npm run db:config && npm run db:test"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.9.5",
