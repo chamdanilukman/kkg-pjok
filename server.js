@@ -565,9 +565,11 @@ if (existsSync(distPath)) {
   app.use(express.static(distPath));
   
   // Handle SPA routing - serve index.html for all non-API routes
-  app.get('*', (req, res) => {
+  app.use((req, res, next) => {
     if (!req.path.startsWith('/api')) {
       res.sendFile(join(distPath, 'index.html'));
+    } else {
+      next();
     }
   });
 }
