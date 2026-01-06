@@ -1,0 +1,9 @@
+name = "kkg-pjok"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = "dist"
+
+[env.production.vars]
+# Environment variables will be set in Cloudflare Pages dashboard
+# NEON_DATABASE_URL = "your-database-url"
+# JWT_SECRET = "your-jwt-secret"
